@@ -6,6 +6,10 @@ class JobsController < ApplicationController
 
     def show
         @job = Job.find(params[:id])
+        if @job.is_hidden
+            flash[:waring] = "这个工作没发布"
+            redirect_to root_path
+        end
     end
 
     def edit
