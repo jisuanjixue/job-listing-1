@@ -59,6 +59,11 @@ element.style {
     color: #717171; /*字体颜色*/
 }
 
+.container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .navbar-default .navbar-brand {
     color: #f2eded;
 }
@@ -110,3 +115,5 @@ a {
   height: auto;
   max-width: 100%;
 }
+
+/* 表格 */

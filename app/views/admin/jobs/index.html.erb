@@ -1,9 +1,11 @@
-<div class="row">
+<div class="container-fluid">
+<!-- <div class="row"> -->
 <div class="col-md-12">
     <div class="pull-right">
-      <%= link_to("新增工作", new_job_path, :class => "btn btn-default" ) %>
-    </div>
- <table class="table table-bordered">
+      <%= link_to("新增工作", new_admin_job_path, :class => "btn btn-default btn-primary btn-lg") %>
+</div>
+
+ <table class="table table-bordered table-striped table-hover table-condensed table-responsive ">
   <thead>
   <tr>
     <th>名称</th>
@@ -18,7 +20,7 @@
 
   <tbody>
    <% @jobs.each do |job| %>
-   <tr>
+   <tr class="success">
     <td>
         <%= render_job_status(job) %>
         <%= link_to(job.title, admin_job_path(job)) %>
@@ -27,20 +29,21 @@
     <td><%= job.wage_lower_bound %></td>
     <td><%= job.wage_upper_bound %></td>
     <td><%= link_to(job.resumes.count, admin_job_resumes_path(job))%></td>
-    <td><%= job.created_at %></td>
+    <td><%= local_time(job.created_at, '%B %e, %Y %l:%M%p') %></td>
     <td>
-     <%= link_to("编辑", edit_admin_job_path(job), :class => "btn btn-sm btn-default") %>
-     <%= link_to("删除", admin_job_path(job), :method => :delete, :data => { :confirm => "Are you sure?" }, :class => "btn btn-sm btn-default") %>
+     <%= link_to("编辑", edit_admin_job_path(job), :class => "btn btn-sm btn-primary") %>
+     <%= link_to("删除", admin_job_path(job), :method => :delete, :data => { :confirm => "Are you sure?" }, :class => "btn btn-sm btn-danger") %>
       <% if job.is_hidden %>
-      <%= link_to("发布", publish_admin_job_path(job), :method => :post,  :class => "btn btn-sm btn-default") %>
+      <%= link_to("发布", publish_admin_job_path(job), :method => :post,  :class => "btn btn-sm btn-warning") %>
       <% else %>
-      <%= link_to("隐藏", hide_admin_job_path(job), :method => :post, :class => "btn btn-sm btn-default") %>
+      <%= link_to("隐藏", hide_admin_job_path(job), :method => :post, :class => "btn btn-sm btn-warning") %>
       <% end %>
     </td>
 
-   </tr>
-   <% end %>
-  </tbody>
- </table>
+     </tr>
+    <% end %>
+   </tbody>
+  </table>
 </div>
+<!-- </div> -->
 </div>

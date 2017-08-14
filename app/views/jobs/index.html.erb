@@ -1,23 +1,20 @@
+<div class="container">
 <div class="row">
     <div class="col-md-12">
 <div class="dropdown clearfix pull-right">
-<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-  排序
-    <span class="caret"></span>
-</button>
-<ul class="dropdown-menu"  aria-labelledby="dropdownMenuDivider">
-    <li><%= link_to("按照薪资下限排序", jobs_path(:order => "by_lower_bound")) %></li>
-    <li><%= link_to("按照薪资上限排序", jobs_path(:order => "by_upper_bound")) %></li>
-    <li><%= link_to("按照发表时间排序", jobs_path) %></li>
-</ul>
+
+<div class="btn-group pull-right" role="group" aria-label="...">
+      <%= link_to("按照薪资下限排序", jobs_path(:order => "by_lower_bound"), :class => "btn btn-default", :data => {:toggle => "button"}) %>
+      <%= link_to("按照薪资上限排序", jobs_path(:order => "by_upper_bound"), :class => "btn btn-default") %>
+      <%= link_to("按照发表时间排序", jobs_path, :class => "btn btn-default") %>
+    </div>
 </div>
- <table class="table table-bordered">
+ <table class="table table-bordered table-striped table-hover table-condensed table-responsive">
   <thead>
   <tr>
     <th>名称</th>
     <th>描述</th>
-    <th>薪资下限</th>
-    <th>薪资上限</th>
+    <th>薪资范围</th>
     <th>联系方式</th>
     <th>时间</th>
   </tr>
@@ -28,13 +25,17 @@
    <tr>
     <td><%= link_to(job.title, job_path(job)) %></td>
     <td><%= job.description %></td>
-    <td><%= job.wage_lower_bound %></td>
-    <td><%= job.wage_upper_bound %></td>
+    <td width="30%">
+      <span>
+        <span class="fa fa-rmb"></span><%= job.wage_lower_bound %> - <%= job.wage_upper_bound %> 元
+      </span>    
+    </td>
     <td><%= job.contact_email %></td>
     <td><%= job.created_at %></td>
    </tr>
    <% end %>
   </tbody>
  </table>
+</div>
 </div>
 </div>
