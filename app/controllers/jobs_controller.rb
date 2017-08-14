@@ -1,7 +1,7 @@
 class JobsController < ApplicationController
 
     def index
-        @jobs = case params[:order]
+     @jobs = case params[:order]
         when 'by_lower_bound'
         Job.where(:is_hidden => false).order('wage_lower_bound DESC')
         when 'by_upper_bound'
@@ -9,6 +9,7 @@ class JobsController < ApplicationController
       else
         Job.where(:is_hidden => false).order("created_at DESC")
        end
+     @jobs = @jobs.paginate(:page => params[:page], :per_page => 5)
    end
 
     def show
@@ -50,6 +51,7 @@ class JobsController < ApplicationController
        @job.destroy
        redirect_to jobs_path
    end
+
 
     private
 
