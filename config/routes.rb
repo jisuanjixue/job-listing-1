@@ -6,6 +6,10 @@ Rails.application.routes.draw do
       resources :resumes
   end
 
+  namespace :account do
+    resources :users
+  end
+
   namespace :admin do
       resources :jobs do
           member do
