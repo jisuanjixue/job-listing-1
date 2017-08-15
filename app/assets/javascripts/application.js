@@ -17,4 +17,5 @@
 //= require bootstrap/dropdown
 //= require local_time
 //= require bootstrap/collapse
+//= require bootstrap/tab
 //= require_tree .
