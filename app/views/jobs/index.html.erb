@@ -45,7 +45,11 @@
    <% @jobs.each do |job| %>
    <tr>
     <td><%= link_to(job.title, job_path(job)) %></td>
-    <td><%= job.description %></td>
+    <td>
+      <div class="job.description">
+         <%= simple_format(job.description) %>
+      </div>
+    </td>
     <td width="30%">
       <span>
         <span class="fa fa-rmb"></span><%= job.wage_lower_bound %> - <%= job.wage_upper_bound %> 元
