@@ -18,4 +18,5 @@
 //= require local_time
 //= require bootstrap/collapse
 //= require bootstrap/tab
+//= require bootstrap/modal
 //= require_tree .
