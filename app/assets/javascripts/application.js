@@ -19,4 +19,11 @@
 //= require bootstrap/collapse
 //= require bootstrap/tab
 //= require bootstrap/modal
+//= require bootstrap/carousel
 //= require_tree .
+
+
+$(document).ready(function() {
+  $('#myCarousel').carousel({interval: 2000});
+
+});
