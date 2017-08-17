@@ -1,7 +1,7 @@
  <div class="container">
    <div class="row">
       <div class="col-md-10">
-      	  <h2> 修改个人资料 </h2>
+      	  <h2 class="text-center"> 修改个人资料 </h2>
         <%= simple_form_for [:account, @user] do |f| %>
           <div>
             <%= f.input :avatar, :label =>"用户头像", as: :file %>
@@ -9,7 +9,7 @@
             <%= f.input :email, :label =>"邮箱地址" %>
             <div><%= f.check_box :is_female, {}, true %> <%= f.label :is_female, "Female" %> </div>
             <div><%= f.check_box :is_female, {}, false %> <%= f.label :is_female, "Male" %> </div>
-            <%= f.input :date_of_birth, :date_select => :date_of_birth%>
+            <%= f.input :date_of_birth, :date_select => :date_of_birth, :label => "出生日期" %>
             <%= link_to("放弃更新", account_users_path, class: "btn btn-sm btn-default" ) %>
             <%= f.submit "提交", class: "btn btn-sm btn-default" %>
           </div>
