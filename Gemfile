@@ -44,6 +44,7 @@ gem 'local_time'
 gem 'mini_magick'
 gem 'paperclip', '~> 4.1'
 gem 'omniauth-github'
+gem 'ckeditor'
 
 
 group :development, :test do

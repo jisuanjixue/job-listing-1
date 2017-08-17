@@ -18,9 +18,14 @@
 //= require local_time
 //= require bootstrap/collapse
 //= require bootstrap/tab
-<<<<<<< HEAD
 //= require ckeditor/init
-=======
 //= require bootstrap/modal
->>>>>>> user_profile
+//= require bootstrap/carousel
+//= require ckeditor/init
 //= require_tree .
+
+
+$(document).ready(function() {
+  $('#myCarousel').carousel({interval: 2000});
+
+});
