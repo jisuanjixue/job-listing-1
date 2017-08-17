@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170817091527) do
+ActiveRecord::Schema.define(version: 20170817094841) do
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "jobs", force: :cascade do |t|
     t.string   "title"
@@ -23,6 +29,7 @@ ActiveRecord::Schema.define(version: 20170817091527) do
     t.boolean  "is_hidden",        default: false
     t.datetime "date_of_make"
     t.datetime "date_of_do"
+    t.integer  "category_id"
   end
 
   create_table "resumes", force: :cascade do |t|
