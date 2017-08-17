@@ -20,6 +20,7 @@
 //= require bootstrap/tab
 //= require bootstrap/modal
 //= require bootstrap/carousel
+//= require ckeditor/init
 //= require_tree .
 
 

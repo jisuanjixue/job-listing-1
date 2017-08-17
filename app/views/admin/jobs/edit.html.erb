@@ -4,7 +4,7 @@
     <%= simple_form_for [:admin, @job] do |f| %>
 	    <div class="form-inputs">
           <%= f.input :title, :placeholder => "请输入名称", :label => "名称" %>
-          <%= f.input :description, :placeholder => "请输入描述", :label => "描述" %>
+          <%= f.input :description, as: :ckeditor, :label => "描述" %>
           <%= f.input :wage_upper_bound, :placeholder => "请输入数字", :label => "薪资上限" %>
           <%= f.input :wage_lower_bound, :placeholder => "请输入数字", :label => "薪资下限" %>
           <div>
