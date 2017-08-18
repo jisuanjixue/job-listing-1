@@ -1,7 +1,7 @@
 <div class="addmodal-container">
-  <h2 class="text-center">新增工作</h2>
+     <h2 class="text-center">新增工作</h2>
   <!-- <div class="col-md-6"> -->
-    <%= simple_form_for [:admin, @job] do |f| %>
+       <%= simple_form_for [:admin, @job] do |f| %>
       <div class="form-inputs">
           <%= f.input :title, :placeholder => "请输入名称", :label => "职位" %>
           <%= f.input :description, as: :ckeditor, :label => "描述" %>
@@ -16,6 +16,6 @@
           <%= f.input :is_hidden, :label => "隐藏" %>
           <%= f.submit "提交" %>
        </div>
-    <% end %>
+      <% end %>
  <!-- </div>  -->
 </div>
