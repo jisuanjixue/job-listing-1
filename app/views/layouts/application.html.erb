@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
   <head>
-    <title>JobListing</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <%= csrf_meta_tags %>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <%= csrf_meta_tags %>
+    <title>JobListing</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" media="all">
   </head>
 
   <body>
+  <div class="content">
       <div class="container-fluid">
         <div class="row">
           <%= render "common/navbar" %>
@@ -18,6 +21,29 @@
           <%= yield %>
         </div>
       </div>
+    </div>
     <%= render "common/footer" %>
+   
   </body>
 </html>
+
+
+
+<!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 3000 //changes the speed
+    })
+
+    $('#bootstrap-touch-slider').bsTouchSlider();
+
+    </script>
+
+   <script>
+    $(document).ready(function () {
+    $('.material-button-toggle').click(function () {
+        $(this).toggleClass('open');
+        $('.option').toggleClass('scale-on');
+    });
+   });
+  </script>

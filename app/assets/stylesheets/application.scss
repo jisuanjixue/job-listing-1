@@ -21,14 +21,18 @@
 
 
 /* 样式 */
+html {
+    height: 100%;
+}
+
 
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.428571429;
   color: #333333;
-  background-color: #ffffff;
 }
+
 
 a:hover,
 a:focus {
@@ -44,14 +48,7 @@ a:focus {
 
 /* navbar 导航栏*/
 
-element.style {
-    position: static;
-    display: block;
-}
-
  .navbar-default {
-    height: 30px; /*设置高度*/  
-    line-height: 30px; /*设置行高，实现垂直居中，口诀「如果高度等于行高，那就实现了文本的垂直居中」*/
     background-color: #3d3d3d;
     border: none;
     border-radius: 0;
@@ -64,11 +61,8 @@ element.style {
     margin-left: auto;
 }
 
-.navbar-default .navbar-brand {
-    color: #f2eded;
-}
-
 .navbar-brand {
+    color: #f2eded;
     float: left;
     padding: 11px 20px;
     font-size: 23px;
@@ -95,18 +89,20 @@ a {
     letter-spacing: 0.05em;
 }
 
-.navbar-default .navbar-toggle {
-    color: #fff;
-    margin-top: 13px;
-    margin-bottom: 13px;
-    margin-right: 0;
-    border-color: #ddd;
+.navbar-collapse {
+    background-color: #3d3d3d;
 }
 
-
-.navbar-default .navbar-collapse, .navbar-default .navbar-form {
-    border-color: #e7e7e7;
+.navbar-form {
+  margin-left: 0px;
+  margin-right: 0px;
 }
+
+.dropdown-menu {
+  font-size: 20px;
+  color: #f5eded; /*字体颜色*/
+}
+
 
 /* 图片 */
 
@@ -267,9 +263,10 @@ a {
 
 /* 工作新增及编辑表格 */
 .addmodal-container {
-  margin-top: 50px;
-  padding: 20px;
-  margin: 0 auto;
+  margin-top: 25px;
+  padding: 25px;
+  margin: 30px auto;
+  height: 1030px;
   max-width: 700px;
   width: 100% !important;
   background-color: #539851;
@@ -293,7 +290,7 @@ a {
 }
 
 .addmodal-container input[type=text], input[type=password] {
-  height: 44px;
+  height: 40px;
   font-size: 16px;
   width: 100%;
   margin-bottom: 10px;
@@ -357,6 +354,168 @@ a {
   transition: opacity ease 0.5s;
 }
 
+/* footer */
+footer {
+  position: absolute;
+  bottom:0;
+  width: 100%;
+  height: 70px;
+  background-color: #414a60;
+  p {
+    color: black;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 16px;
+  }
+}
+
+/* 轮播图 */
+.carousel-inner img {
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%); /* make all photos black and white */
+    width: 100%; /* Set width to 100% */
+    height: 100%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.carousel-caption h3 {
+    color: #fff !important;
+}
+
+@media (max-width: 600px) {
+    .carousel-caption {
+        display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+}
+
+.carousel-control {
+    top: 360px;
+    bottom: 100%;
+    left: 0;
+    width: 15%;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+    background-color: transparent;
+}
 
 
+/* 提供的工作类别 */
+.container2 {
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-top:-20px;
+    padding: 40px 30px 100px 30px;
+}
 
+/* Remove rounded borders from list */
+.list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* Remove border and add padding to thumbnails */
+.thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+}
+
+.thumbnail p {
+    margin-top: 15px;
+    color: #555;
+}
+
+/* Black buttons with extra padding and without rounded borders */
+.btn1 {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+}
+
+/* On hover, the color of .btn will transition to white with black text */
+.btn1:hover, .btn1:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+}
+
+.modal-header, h4, .close {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+}
+
+.modal-header, .modal-body {
+    padding: 40px 50px;
+}
+
+/* 他们怎么说 */
+
+.container3 {
+    margin-top:-20px;
+    margin-right: -15px;
+    margin-left: -15px;
+    background-color: #e6e8ea;
+    padding: 40px 30px 100px 30px;
+}
+
+.container4 {
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-top: 20px;
+    padding: 40px 30px 100px 30px;
+}
+
+/* 被公司录取*/
+.person:hover {
+    border-color: #f1f1f1;
+}
+
+/* 引导 */
+.support {
+    text-align: center;
+    margin: -15px -15px -30px -15px;
+    height: 200px;
+    background-image: url("https://job-win.herokuapp.com/assets/start-d2be4f033307bc6b24b78ec4d17d1c70c36d08f3875e434d457374b5033267bd.jpg");
+}
+
+section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+
+/* 短横线 */
+.short-line {
+  display: block;
+  background: #1ecd97;
+  border-style: none;
+  border-radius: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  z-index: 53;
+  width: 50px;
+  height: 3px;
+  position: relative;
+}
+
+/* 前台求职页 */
+
+.col-md-12 {
+  padding-top: 100px;
+}
