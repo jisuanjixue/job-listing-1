@@ -17,10 +17,12 @@
            <li><a href="#">工作</a></li>
 
            <form class="navbar-form navbar-right" role="search">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
+              <%= form_tag search_jobs_path , :method => :get do %>
+                <div class="form-group" id="search-id" >
+                   <input type="text" class="form-control" name="q" value="<%= params[:q] %>" placeholder="请输入职位信息">
                 </div>
-                <button type="submit" class="btn btn-default">搜索</button>
+                <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i>搜索</button>
+                <% end %>
            </form>
 
        </ul>
