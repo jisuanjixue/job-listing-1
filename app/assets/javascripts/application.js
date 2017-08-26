@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap/alert
+//= require bootstrap-sprockets
 //= require bootstrap/dropdown
 //= require local_time
 //= require bootstrap/collapse
@@ -27,4 +28,11 @@
 $(document).ready(function() {
   $('#myCarousel').carousel({interval: 2000});
 
+});
+
+$(function(){
+	$(".carousel-control").css("line-height", $(".carousel-inner img").height() + "px");
+	$(window).resize(function() {
+         $(".carousel-control").css("line-height", $(".carousel-inner img").height() + "px");
+	});
 });

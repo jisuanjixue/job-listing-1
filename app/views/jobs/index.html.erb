@@ -1,8 +1,7 @@
 <div class="container">
 <div class="row">
     <div class="col-md-12">
-
-      <ul id="myTab" class="nav nav-tabs" role="tablist">
+    <ul id="myTab" class="nav nav-tabs" role="tablist">
       <li class="">
         <a data-toggle="tab" href="#category-0">产品</a>
       </li>
@@ -22,14 +21,17 @@
         <a data-toggle="tab" href="#category-7">职能</a>
       </li>
     </ul>
-<div class="dropdown clearfix pull-right">
 
-<div class="btn-group pull-right" role="group" aria-label="...">
+  <!-- <div class="dropdown clearfix pull-right"> -->
+  <div class="btn-group pull-right" role="group" aria-label="...">
       <%= link_to("按照薪资下限排序", jobs_path(:order => "by_lower_bound"), :class => "btn btn-default", :data => {:toggle => "button"}) %>
       <%= link_to("按照薪资上限排序", jobs_path(:order => "by_upper_bound"), :class => "btn btn-default") %>
       <%= link_to("按照发表时间排序", jobs_path, :class => "btn btn-default") %>
     </div>
-</div>
+
+    <br>
+    <br>
+<!-- </div> -->
  <table class="table table-bordered table-striped table-hover table-condensed table-responsive">
   <thead>
   <tr>
