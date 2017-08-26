@@ -45,6 +45,8 @@ gem 'mini_magick'
 gem 'paperclip', '~> 4.1'
 gem 'omniauth-github'
 gem 'ckeditor'
+gem 'ransack'
+gem 'seo_helper'
 
 
 group :development, :test do

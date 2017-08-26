@@ -9,7 +9,7 @@
           <%= f.input :wage_lower_bound, :placeholder => "请输入数字", :label => "薪资下限" %>
           <div>
           <%= f.label :时间 %><br />
-          <%= f.date_select :date_of_make %>
+          <%= f.date_select :date_of_do %>
           </div><br />
           <%= f.input :contact_email, :label => "企业邮箱" %>
           <%= select_tag(:category_id, options_for_select(@categories), :prompt => "类别") %>

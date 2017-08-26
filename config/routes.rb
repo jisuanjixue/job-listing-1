@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   root "welcome#index"
 
   resources :jobs do
+    collection do
+      get :search
+    end
       resources :resumes
   end
 
